@@ -51,6 +51,16 @@ public class Product {
         this.unitPrice = unitPrice;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productStock=" + productStock +
+                ", unitPrice=" + unitPrice +
+                '}';
+    }
+
     @Id
     private int productId;
 
