@@ -88,4 +88,8 @@ public class ProductService {
 
         return response;
     }
+
+    public List<Product> searchProducts(String s) {
+        return repo.searchProducts(s);
+    }
 }

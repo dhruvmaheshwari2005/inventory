@@ -34,6 +34,11 @@ public class ProductController {
         return service.createProducts(products);
     }
 
+    @GetMapping("/p/{s}")
+    public List<Product> searchProducts(@PathVariable String s) {
+        return service.searchProducts(s);
+    }
+
     /**
      * Product response wrapper for get product request
      */

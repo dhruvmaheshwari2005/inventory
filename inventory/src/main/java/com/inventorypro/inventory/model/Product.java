@@ -1,7 +1,8 @@
 package com.inventorypro.inventory.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import javax.naming.Name;
 
 /**
  * @description Model for Product table
@@ -10,7 +11,7 @@ import jakarta.persistence.Id;
  */
 @Entity
 public class Product {
-    public int getProductId() {
+    public long getProductId() {
         return productId;
     }
 
@@ -62,7 +63,8 @@ public class Product {
     }
 
     @Id
-    private int productId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQ")
+    private long productId;
 
     private String productName;
     private Double productStock;
